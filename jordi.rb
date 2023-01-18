@@ -5,22 +5,40 @@
 class Jordi < Formula
   desc "Terminal based gRPC client"
   homepage "https://github.com/rnesytov/jordi/"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
-  depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rnesytov/jordi/releases/download/v0.0.1/jordi_0.0.1_osx_arm64.tar.gz"
-      sha256 "87add4f1c0a515fe2c7e5d9d13a1a2fd0110944ec3fe5dba8ffa0a8a354542aa"
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.2/jordi_0.0.2_darwin_arm64.tar.gz"
+      sha256 "bb8f96bb358f43c9536149756f6392f981c9552c5585178b74ec8dadd1ab9b3d"
 
       def install
         bin.install "jordi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rnesytov/jordi/releases/download/v0.0.1/jordi_0.0.1_osx_x86_64.tar.gz"
-      sha256 "91b44f9f364354843d93e00ce2f6ca028143a34de08777d660f2360e20d798e7"
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.2/jordi_0.0.2_darwin_amd64.tar.gz"
+      sha256 "3786f34c2bf4222e789350796bd7d29736bdea2a94d67a783122dae7e0c10cab"
+
+      def install
+        bin.install "jordi"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.2/jordi_0.0.2_linux_arm64.tar.gz"
+      sha256 "c6967fcf9ad155d63f5ab77303fa2b8e6354d9c7db7dd6d5618ee8f570742242"
+
+      def install
+        bin.install "jordi"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.2/jordi_0.0.2_linux_amd64.tar.gz"
+      sha256 "79550c9d94dc74268ea9c5a95844de044bff69c396820f19b115b0b803bac135"
 
       def install
         bin.install "jordi"
