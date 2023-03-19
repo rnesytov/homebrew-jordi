@@ -5,21 +5,21 @@
 class Jordi < Formula
   desc "Terminal based gRPC client"
   homepage "https://github.com/rnesytov/jordi/"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rnesytov/jordi/releases/download/v0.0.4/jordi_0.0.4_darwin_arm64.tar.gz"
-      sha256 "7cd568e26ce854f78d2dc31e6cd58b4d0f3ed2d823c8a601afe410e0acbcd016"
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.5/jordi_0.0.5_darwin_arm64.tar.gz"
+      sha256 "eab7d16c22a08c82f150a1980e764e0172c9a83ad37f0df7b5acc5113a25b2b8"
 
       def install
         bin.install "jordi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rnesytov/jordi/releases/download/v0.0.4/jordi_0.0.4_darwin_amd64.tar.gz"
-      sha256 "3af9896b51614035b109a35878485423f7aaaf7411701293e476ca5ba52aa92f"
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.5/jordi_0.0.5_darwin_amd64.tar.gz"
+      sha256 "da06f1ebc4bb762cc6f828f45da522d1e508184517a47f4432386e9ef0f48b11"
 
       def install
         bin.install "jordi"
@@ -29,16 +29,16 @@ class Jordi < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rnesytov/jordi/releases/download/v0.0.4/jordi_0.0.4_linux_arm64.tar.gz"
-      sha256 "de45d22cb38a0b554efb54e1fdd28f1c590a390f535d8da637c6d7b922472a5e"
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.5/jordi_0.0.5_linux_arm64.tar.gz"
+      sha256 "92b0bfc14afb9395f4b85fe539768ae3a50dab8dd2dc32fb8de85fb6350a59c4"
 
       def install
         bin.install "jordi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rnesytov/jordi/releases/download/v0.0.4/jordi_0.0.4_linux_amd64.tar.gz"
-      sha256 "007ad2b3a38666846dd026a59e531b27b47379849ed012e4cd5dcae4a3f82ed0"
+      url "https://github.com/rnesytov/jordi/releases/download/v0.0.5/jordi_0.0.5_linux_amd64.tar.gz"
+      sha256 "5ba000ac677f8674af058563ad28635b4a709a9d517268bf3f8c23ccfffaa12a"
 
       def install
         bin.install "jordi"
